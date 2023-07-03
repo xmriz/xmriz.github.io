@@ -1,16 +1,30 @@
 body {
-    margin-top: 50px;
+    overflow-x: hidden;
+    
 }
+
+/* Jumbotron */
+
+.jumbotron {
+    padding-top: 6rem;
+    background-color: #a2d9ff;
+}   
 
 .jumbotron img {
-    width: 25%;
+    width: 70vw;
+    height: 70vw;
+    object-fit: cover;
+    border: 3px solid white;
+    max-height: 200px;
+    max-width: 200px;
 }
+
+.project {
+    background-color: #a2d9ff;
+}
+
 
 section {
-    min-height: 420px;
-}
+    padding-top: 5rem;
 
-footer {
-    min-height: 50px;
-    padding-top:12px;
 }

@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- icon css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- AOS Plugin --> <!-- aos adalah library CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body id="home">
@@ -34,6 +36,9 @@
             <a class="nav-link" href="#project">Project</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
@@ -48,7 +53,7 @@
     <div class="container-fluid text-center">
       <img src="img/pp.png" alt="" class="rounded-circle pp">
       <h1 class="display-4" style="font-weight: 400;">Ahmad Rizki</h1>
-      <p class="lead">Student at Institut Teknologi Bandung</p>
+      <p class="lead"><!-- Student at Insitut Teknologi Bandung --></p>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#ffffff" fill-opacity="1"
@@ -63,15 +68,17 @@
   <!-- About -->
   <section class="about" id="about">
     <div class="container text-center">
-      <div class="row mb-3">
+      <div class="row mb-3"> <!-- data-aos: tipe-transisi, data-aos-offset: jarak scroll default 200 -->
         <h2>About</h2>
       </div>
       <div class="row justify-content-center fs-5">
-        <div class="col-md-4 mb-2">
+        <div class="col-md-4 mb-2" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000"
+          data-aos-once="true">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quaerat veniam unde quod officiis beatae
           earum? Aliquid hic unde corporis labore, quod atque rem! Velit quidem incidunt id quas? Ad!
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1000" data-aos-delay="200"
+          data-aos-once="true">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quaerat veniam unde quod officiis beatae
           earum? Aliquid hic unde corporis labore, quod atque rem! Velit quidem incidunt id quas? Ad!
         </div>
@@ -94,7 +101,7 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-sm-4 mb-3">
-          <div class="card">
+          <div class="card" data-aos="flip-left" data-aos-duration="500">
             <img src="img/itb.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -103,7 +110,7 @@
           </div>
         </div>
         <div class="col-sm-4 mb-3">
-          <div class="card">
+          <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
             <img src="img/itb.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -112,7 +119,7 @@
           </div>
         </div>
         <div class="col-sm-4 mb-3">
-          <div class="card">
+          <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="150">
             <img src="img/itb.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -121,7 +128,7 @@
           </div>
         </div>
         <div class="col-sm-4 mb-3">
-          <div class="card">
+          <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
             <img src="img/itb.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -130,7 +137,7 @@
           </div>
         </div>
         <div class="col-sm-4 mb-3">
-          <div class="card">
+          <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="250">
             <img src="img/itb.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -147,6 +154,97 @@
   <!-- Akhir Projects -->
 
 
+  <!-- Gallery -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="row mb-3">
+        <h2 class="text-center">Gallery</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-3 col-sm-5">
+          <a href="img/itb.jpeg" class="thumbnail">
+            <img src="img/itb.jpeg" alt="" class="img-thumbnail img-fluid gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-5">
+          <a href="img/itb.jpeg" class="thumbnail">
+            <img src="img/itb.jpeg" alt="" class="img-thumbnail img-fluid gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-5">
+          <a href="img/itb.jpeg" class="thumbnail">
+            <img src="img/itb.jpeg" alt="" class="img-thumbnail img-fluid gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-5">
+          <a href="img/itb.jpeg" class="thumbnail">
+            <img src="img/itb.jpeg" alt="" class="img-thumbnail img-fluid gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-5">
+          <a href="img/itb.jpeg" class="thumbnail">
+            <img src="img/itb.jpeg" alt="" class="img-thumbnail img-fluid gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-5">
+          <a href="img/itb.jpeg" class="thumbnail">
+            <img src="img/itb.jpeg" alt="" class="img-thumbnail img-fluid gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-5">
+          <a href="img/itb.jpeg" class="thumbnail">
+            <img src="img/itb.jpeg" alt="" class="img-thumbnail img-fluid gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-5">
+          <a href="img/itb.jpeg" class="thumbnail">
+            <img src="img/itb.jpeg" alt="" class="img-thumbnail img-fluid gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-5">
+          <a href="img/itb.jpeg" class="thumbnail">
+            <img src="img/itb.jpeg" alt="" class="img-thumbnail img-fluid gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-5">
+          <a href="img/itb.jpeg" class="thumbnail">
+            <img src="img/itb.jpeg" alt="" class="img-thumbnail img-fluid gallery-img">
+          </a>
+        </div>
+      </div>
+      <div class="row"></div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#a2d9ff" fill-opacity="1"
+        d="M0,32L20,69.3C40,107,80,181,120,213.3C160,245,200,235,240,208C280,181,320,139,360,128C400,117,440,139,480,128C520,117,560,75,600,69.3C640,64,680,96,720,106.7C760,117,800,107,840,138.7C880,171,920,245,960,229.3C1000,213,1040,107,1080,85.3C1120,64,1160,128,1200,149.3C1240,171,1280,149,1320,122.7C1360,96,1400,64,1420,48L1440,32L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z">
+  </section>
+  <!-- akhir Gallery -->
+
+
+  <!-- 3D Image -->
+  <section id="photo" class="photo">
+    <div class="container">
+      <div class="row mb-3">
+        <h2 class="text-center">My Photo</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col">
+          <div class="image-box-container">
+            <div class="image-box">
+              <h3 class="photo-name">amriz</h3>
+              <img src="img/cartoon.png" alt="" height="570px">
+              <a href="#" class="btn btn-light detailed-tombol"> Show Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#ffffff" fill-opacity="1"
+        d="M0,32L20,69.3C40,107,80,181,120,213.3C160,245,200,235,240,208C280,181,320,139,360,128C400,117,440,139,480,128C520,117,560,75,600,69.3C640,64,680,96,720,106.7C760,117,800,107,840,138.7C880,171,920,245,960,229.3C1000,213,1040,107,1080,85.3C1120,64,1160,128,1200,149.3C1240,171,1280,149,1320,122.7C1360,96,1400,64,1420,48L1440,32L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z">
+  </section>
+
+
   <!-- Contacts -->
   <section class="contact" id="contact">
     <div class="container">
@@ -154,8 +252,8 @@
         <h2 class="text-center">Contacts</h2>
       </div>
       <div class="row justify-content-center">
-        <div class="col-sm-4">
-          <!-- contact me -->
+        <div class="col-md-4">
+          <!-- Contact me -->
           <div class="card text-white bg-primary mb-3 text-center">
             <div class="card-body">
               <h5 class="card-title">Contact Me</h5>
@@ -202,7 +300,7 @@
                 <option>Perempuan</option>
               </select>
             </div>
-            <div class="mb-2">
+            <div class="mb-3">
               <label for="pesan">Pesan</label>
               <textarea name="pesan" id="pesan" class="form-control" rows="6" name="pesan"></textarea>
             </div>
@@ -224,8 +322,8 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-sm-12 fw-bold">
-          <p>Copyright &copy; 2021 | Built by <i class="bi text-danger bi-heart-fill"></i> <a
-              href="https://instagram.com/xmriz">amriz</a>
+          <p>Copyright &copy; 2021 | Built by <i
+              class="bi text-danger bi-heart-fill"></i><a>href="https://instagram.com/xmriz">amriz</a>
           </p>
         </div>
       </div>
@@ -237,6 +335,84 @@
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
+
+
+  <!-- Tilt JS -->
+  <script type="text/javascript"
+    src="js/raw.githubusercontent.com_micku7zu_vanilla-tilt.js_master_dist_vanilla-tilt.min.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelector(".image-box"), {
+      max: 35,
+      speed: 1000,
+      perspective: 1000,
+      //scale: 1.1,
+      //glare: true,
+    });
+
+  //It also supports NodeList
+  // VanillaTilt.init(document.querySelectorAll(".your-element"));
+  </script>
+
+
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    const galleryImg = document.querySelectorAll('.gallery-img');
+
+    galleryImg.forEach((img, i) => {
+      img.dataset.aos = 'fade-down';
+      img.dataset.aosDelay = i * 100;
+      img.dataset.aosDuration = 1000;
+    });
+
+    AOS.init({ // nilai default dari AOS
+      mirror: true
+    });
+  </script>
+
+
+  <!-- GSAP Platform -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+  <script>
+    // plugin register
+    gsap.registerPlugin(TextPlugin); //text plugin gsap
+
+    // aslinya akan menjadi keadaan akhir
+    gsap.from('.jumbotron img', {
+      opacity: 0,
+      rotateY: 720,
+      duration: 1,
+      ease: 'back'
+    });
+
+    gsap.from('.navbar', {
+      opacity: 0,
+      y: '-100%',
+      duration: 1,
+      ease: 'bounce',
+    });
+
+    gsap.from('.display-4', {
+      opacity: 0,
+      y: '-100%',
+      duration: 1,
+      ease: 'bounce',
+      delay: 0.5
+    });
+
+
+    <!-- text plugin -->
+    gsap.to('.lead', {
+      duration: 2,
+      delay: 1.5,
+      text: {
+        value: 'Student at Insitut Teknologi Bandung',
+      }
+    })
+
+  </script>
+
 
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbz03Bfx9Cdk9O34fctpkNRLkCy-_uskfY55k5Ckou0Jh8qDc20LHQOVtQ3rVsdWNnTY3g/exec'

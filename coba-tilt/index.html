@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .kotak {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    margin: 50px auto;
+    display: flex;
+  }
+
+  .kotak h3 {
+    margin: auto;
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coba Tilt JS</title>
+</head>
+
+<body>
+  <div class="kotak">
+    <h3>Tulisan</h3>
+  </div>
+  <!-- <div class="kotak" data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500"></div> -->
+
+
+
+  <script type="text/javascript"
+    src="raw.githubusercontent.com_micku7zu_vanilla-tilt.js_master_dist_vanilla-tilt.min.js"></script>
+  <script>
+      VanillaTilt.init(document.querySelector(".kotak"), {
+        max: 50,
+        speed: 400,
+        perspective: 500,
+      });
+
+    //It also supports NodeList
+    // VanillaTilt.init(document.querySelectorAll(".your-element"));
+  </script>
+</body>
+
+</html>

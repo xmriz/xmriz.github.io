@@ -177,22 +177,26 @@
         </div>
 
         <div class="col-md-6">
-          <form>
+          <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert"> <!-- alert -->
+            <strong>Terkirim!</strong> Pesan Anda sudah diterima.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <form name="xmriz-contact-form">
             <div class="mb-2">
               <label for="nama">Nama</label>
-              <input type="text" id="nama" class="form-control" placeholder="Masukkan Nama">
+              <input type="text" id="nama" class="form-control" placeholder="Masukkan Nama" name="nama">
             </div>
             <div class="mb-2">
               <label for="email">Email</label>
-              <input type="email" id="email" class="form-control" placeholder="Masukkan Email">
+              <input type="email" id="email" class="form-control" placeholder="Masukkan Email" name="email">
             </div>
             <div class="mb-2">
               <label for="telp">No. Telepon</label>
-              <input type="tel" id="telp" class="form-control" placeholder="Masukkan No. Telepon">
+              <input type="tel" id="telp" class="form-control" placeholder="Masukkan No. Telepon" name="notelp">
             </div>
             <div class="mb-2">
               <label for="jk">Jenis Kelamin</label>
-              <select class="form-control" id="jk">
+              <select class="form-control" id="jk" name="jeniskelamin">
                 <option>-- Pilih Jenis Kelamin --</option>
                 <option>Laki-laki</option>
                 <option>Perempuan</option>
@@ -200,9 +204,13 @@
             </div>
             <div class="mb-2">
               <label for="pesan">Pesan</label>
-              <textarea name="pesan" id="pesan" class="form-control" rows="6"></textarea>
+              <textarea name="pesan" id="pesan" class="form-control" rows="6" name="pesan"></textarea>
             </div>
-            <button type="button" class="btn btn-primary">Kirim</button>
+            <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+            <button class="btn btn-primary btn-loading d-none" type="button" disabled> <!-- d-none biar hilang -->
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Loading...
+            </button>
           </form>
         </div>
       </div>
@@ -216,7 +224,8 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-sm-12 fw-bold">
-          <p>Copyright &copy; 2021 | Built by <i class="bi text-danger bi-heart-fill"></i> <a href="https://instagram.com/xmriz">amriz</a>
+          <p>Copyright &copy; 2021 | Built by <i class="bi text-danger bi-heart-fill"></i> <a
+              href="https://instagram.com/xmriz">amriz</a>
           </p>
         </div>
       </div>
@@ -228,6 +237,37 @@
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz03Bfx9Cdk9O34fctpkNRLkCy-_uskfY55k5Ckou0Jh8qDc20LHQOVtQ3rVsdWNnTY3g/exec'
+
+    const form = document.forms['xmriz-contact-form']
+    const btnKirim = document.querySelector('.btn-kirim')
+    const btnLoading = document.querySelector('.btn-loading')
+    const myAlert = document.querySelector('.my-alert')
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      // ketika tombol submit diklik
+      // tampilkan tombol loading, hilangkan tombol kirim
+      btnLoading.classList.toggle('d-none') // d-none pada btn-loading dihilangkan
+      btnKirim.classList.toggle('d-none') // d-none pada btn-kirim diadakan
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          console.log('Success!', response);
+          // tampilkan tombol kirim, hilangkan tombol loading
+          btnLoading.classList.toggle('d-none');
+          btnKirim.classList.toggle('d-none');
+          // tampilkan alert
+          myAlert.classList.toggle('d-none');
+          // reset formnya
+          form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
 </body>
 
 </html>

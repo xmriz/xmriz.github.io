@@ -1,7 +1,7 @@
 // navbar fixed
 window.onscroll = () => {
   const header = document.querySelector('header'); // ambil tag header
-  const fixedNav = header.offsetTop; // ambil jarak header ke atas
+  const fixedNav = header.offsetTop; // ambil jarak header ke atas.
   const linkText = document.querySelectorAll('header nav a'); // ambil semua link
 
   if (window.scrollY > fixedNav) {

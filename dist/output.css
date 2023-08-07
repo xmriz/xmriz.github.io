@@ -1362,6 +1362,10 @@ body {
   .max-lg\:mt-3 {
     margin-top: 0.75rem;
   }
+
+  .max-lg\:flex-wrap {
+    flex-wrap: wrap;
+  }
 }
 
 @media not all and (min-width: 640px) {
